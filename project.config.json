@@ -1,0 +1,112 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx607b92668342d8ca",
+	"projectname": "muspaceWxApp",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": 0,
+					"name": "普通活动",
+					"pathName": "pages/activity/activityFrom",
+					"query": "active_id=107&hb=0&cate_id=1&active_time_id=303",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "候补报名",
+					"pathName": "pages/activity/activityFrom",
+					"query": "cate_id=2&active_time_id=395&spot=0&hb=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加参观人",
+					"pathName": "pages/activity/againVisitor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "报名信息填写",
+					"pathName": "pages/activity/activityFrom",
+					"query": "cate_id=1&active_time_id=362&spot=0&hb=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单中心",
+					"pathName": "pages/personal/personalCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "活动详情",
+					"pathName": "pages/activity/activityDetail",
+					"query": "id=61&spot=226",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加参观人",
+					"pathName": "pages/activity/addVisitors",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "候补结果页面",
+					"pathName": "pages/activity/yyjg",
+					"query": "titem_id=4666&hb=1",
+					"scene": null
+				}
+			]
+		}
+	}
+}

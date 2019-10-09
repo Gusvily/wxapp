@@ -1,0 +1,38 @@
+/**index.wxss**/
+@import "../../template/iconfont.wxss";
+
+/* pages/index/getSetting.wxss */
+.mus_logo {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  position: fixed;
+  top: 200rpx;
+  left: 300rpx;
+}
+
+.allow {
+  font-size: 32rpx;
+  width: 650rpx;
+  height: 88rpxpx;
+  position: fixed;
+  bottom: 200rpx;
+  left: 50rpx;
+  text-align: center;
+}
+
+.refuse {
+  font-size: 32rpx;
+  width: 650rpx;
+  height: 88rpxpx;
+  position: fixed;
+  bottom: 300rpx;
+  left: 50rpx;
+  text-align: center;
+}
+
+.wx_icon {
+  width: 46rpx;
+  height: 37rpx;
+  vertical-align: middle;
+}

@@ -1,0 +1,58 @@
+<!--pages/activity/getAddress.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='wrapper'>
+  <view class='search'>
+    <view class='searchInput'>
+      <icon class='iconfont icon-sousuo'></icon>
+      <input placeholder="热门搜索:  北京" value='{{input}}' confirm-type="search" bindconfirm="search" />
+    </view>
+  </view>
+  <scroll-view style='height:{{height+"px"}}' bindscroll="scroll" scroll-y="true" scroll-into-view="{{jumpNum}}" scroll-with-animation="true">
+    <view id="index0" bindtap='dingwei' class='gps floor'>
+      <text>{{address?address:'全国'}}</text>
+      <text>开启GPS定位</text>
+    </view>
+    <view class='box'>
+      <view id="index1" class='zjfw floor'>
+        最近访问
+      </view>
+      <view class='box_item_wrap'>
+        <view wx:for='{{history_city}}' data-city_id='{{item.city_id}}' data-city='{{item.city}}' wx:for-index="idx" wx:for-item="item" wx:key="city_id" bindtap='getCity' class='box_item {{item.city_id == activeObj.city_id ? "activeCityId" : ""}}'>
+          {{item.city}}
+        </view>
+      </view>
+      <view id="index2" class='rmcs floor'>
+        热门城市
+      </view>
+      <view class='box_item_wrap'>
+        <view class='box_item {{item.city == activeObj.city_id ? "activeCityId" : ""}}' wx:for='{{hot_city}}' data-city_id='{{item.city}}' data-city='{{item.city_name}}' wx:for-index="idx" wx:for-item="item" wx:key="city_id" bindtap='getCity'>
+          {{item.city_name}}
+        </view>
+      </view>
+    </view>
+    <!-- 城市列表 -->
+    <view class='city_list_wrap'>
+      <view wx:if="{{!is_search}}" wx:for='{{city_list}}' id="{{'index'+(idx+3)}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" class='city_item floor'>
+        <view class='key_name'>{{item.key_name}}</view>
+        <view wx:for='{{item.city_list}}' wx:for-index="idx" wx:for-item="item2" wx:key="idx" data-city_id='{{item2.city_id}}' data-city='{{item2.city_name}}' class='{{item2.city_id == activeObj.city_id ? "activeCityId" : ""}}' bindtap='getCity'>
+          {{item2.city_name}}</view>
+      </view>
+      <view wx:if="{{is_search}}" class='city_item'>
+        <view wx:for='{{search_city}}' wx:for-index="idx" wx:for-item="item3" wx:key="idx" data-city_id='{{item3.city_id}}' data-city='{{item3.city_title}}' class='activeCityId' bindtap='getCity'>
+          {{item3.city_title}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if="{{is_modelFloor}}" class='modelFloor'>
+  {{floor}}
+</view>
+
+<view class='floor_box'>
+  <view class='floor_wrap'>
+    <view class='{{listIndex == 0?"active":""}}' data-id="{{'index0'}}" data-floor="定" catchtap='jumpMt'>定位</view>
+    <view class='{{listIndex == 1?"active":""}}' data-id="{{'index1'}}" data-floor="历" catchtap='jumpMt'>历史</view>
+    <view class='{{listIndex == 2?"active":""}}' data-id="{{'index2'}}" data-floor="热" catchtap='jumpMt'>热门</view>
+    <view wx:for='{{city_list}}' wx:for-index="idx" wx:for-item="item" wx:key="idx" class='{{listIndex == (idx+3)?"active":""}}' data-id="{{'index'+(idx+3)}}" data-floor="{{item.key_name}}" catchtouchstart='jumpMt' catchtouchend='jumpMt2'>{{item.key_name}}</view>
+  </view>
+</view>

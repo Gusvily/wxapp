@@ -1,0 +1,121 @@
+/* component/date.wxss */
+@import "../template/iconfont.wxss";
+
+.calendar {
+  padding: 0 48rpx 38rpx;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding-top: 50%;
+}
+.content{
+  background: #fff;
+  border-radius: 10rpx;
+}
+.selectDate {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.selectDate .iconfont {
+  font-size: 40rpx;
+  vertical-align: middle;
+}
+
+.date-wrap {
+  margin: 0 32rpx;
+  vertical-align: middle;
+}
+
+.week {
+  display: flex;
+  color: #45474e;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.week view {
+  width: 14.2%;
+  text-align: center;
+}
+
+.date {
+  display: flex;
+  flex-wrap: wrap;
+  color: #45474e;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.date .day {
+  width: 14.2%;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 28rpx 0 0;
+}
+
+.date .day view {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.date .day .today {
+  color: #fb4b30;
+  position: relative;
+  border: 2rpx solid #fb4b30;
+}
+
+.today::after {
+  content: " ";
+  display: block;
+  width: 8rpx;
+  height: 8rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -4rpx;
+  bottom: 4rpx;
+  border-radius: 50%;
+  background: #fb4b30;
+}
+
+.date .day .pervDay {
+  color: #a7a7a7;
+}
+
+.date .day .ativeDate {
+  background: #ffd9d5;
+}
+
+.date .day .currentDate {
+  background: #fb4b30;
+  color: #fff;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: space-around;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fc6f59;
+  color: #fff;
+  font-size: 26rpx;
+   border-radius: 0 0 10rpx 10rpx;
+}
+
+.btnWrap view {
+  width: 50%;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+<!--pages/index/getSetting.wxml-->
+<view class="container">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <image class="mus_logo" src="../../icon/mus_logo@2x.png" mode="cover"></image>
+  <button class='refuse' type="warn" lang="zh_CN" bindtap="goback">
+    拒绝获取用户信息
+  </button>
+  <button class='allow' type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    允许获取用户信息
+  </button>
+</view>

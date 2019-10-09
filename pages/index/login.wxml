@@ -1,0 +1,9 @@
+<!--pages/index/login.wxml-->
+<view class="container">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <image class="mus_logo" src="../../icon/mus_logo@2x.png" mode="cover"></image>
+  <button bindtap='login' type="primary" class='allow'>
+    <image class='wx_icon' src="../../icon/weixinmendian_icon@2x.png" mode="cover"></image>
+    登录失效,重新登录
+  </button>
+</view>

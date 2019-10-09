@@ -1,0 +1,23 @@
+<!--component/pickDate.wxml-->
+<!-- 兑现时间选择器 -->
+  <view catchtouchmove="true" hidden="{{pickData.is_paick}}" class="paickModel">
+    <view class="paick animated {{pickData.is_paick?'bounceInDown':'bounceInUp'}}">
+      <view class="paick-title">截止兑现时间</view>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px; text-align: center;" value="{{paickValue}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{days}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{hours}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{minutes}}" wx:key="{{index}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+      <view class='paick-button'>
+        <text bindtap="sure">确定</text>
+        <text>|</text>
+        <text bindtap="cacle">取消</text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <image class="mus_logo" src="../../icon/mus_logo@2x.png" mode="cover"></image>
+  <button class='refuse' type="warn" bindtap="goback">
+    拒绝获取手机号
+  </button>
+  <button class='allow' type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+    <image class='wx_icon' src="../../icon/weixinmendian_icon@2x.png" mode="cover"></image>
+    微信手机号快捷登录
+  </button>
+</view>

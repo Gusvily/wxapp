@@ -1,0 +1,19 @@
+<!--pages/activity/searchCity.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<my-order></my-order>
+<view class='wrapper'>
+  <view class='search'>
+    <view bindtap='goBack' class='searchInput'>
+      <icon class='iconfont icon-sousuo'></icon>
+      <!-- <input placeholder="热门搜索:  北京" value='{{input}}' confirm-type="search" bindconfirm="search" /> -->
+      <input placeholder="搜索:  北京" value='{{input}}' />
+    </view>
+  </view>
+  <!-- 搜索结果的城市列表 -->
+  <view class='city_list_wrap'>
+    <view class='city_item'>
+      <view wx:for='{{search_city}}' wx:for-index="idx" wx:for-item="item3" wx:key="idx" data-city_id='{{item3.city_id}}' data-city='{{item3.city_title}}' class='activeCityId' bindtap='getCity'>
+        {{item3.city_title}}</view>
+    </view>
+  </view>
+</view>

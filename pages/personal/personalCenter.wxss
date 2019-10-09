@@ -1,0 +1,124 @@
+/* pages/personal/personalCenter.wxss */
+
+.wrap {
+  height: 100vh;
+}
+
+.wddd {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #e8593e;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.itemList {
+  padding: 0 40rpx;
+}
+
+.item {
+  padding: 34rpx 0;
+}
+
+.item .title {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 24rpx;
+}
+
+.box {
+  display: flex;
+}
+
+.box_left {
+  width: 140rpx;
+}
+
+.box_left .img {
+  width: 114rpx;
+  height: 80rpx;
+  border-radius: 6rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.box_left .status {
+  background: #01ad62;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+  margin-right: 24rpx;
+  padding: 0 10rpx;
+}
+
+.box_right {
+  /* width: cacl(100% - 100rpx); */
+  width: 530rpx;
+}
+
+.box_right .address {
+  color: #9b9b9b;
+  font-size: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10rpx;
+}
+
+.box_right .time {
+  color: #9b9b9b;
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+.box_right .museum {
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.btnWrap {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.btnWrap .btn {
+  width: 154rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 2rpx solid #01ad62;
+  border-radius: 4rpx;
+  color: #01ad62;
+  float: right;
+}
+
+.btnWrap .btn2 {
+  width: 154rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 2rpx solid #e8593e;
+  /* border-radius: 4rpx; */
+  color: #e8593e;
+  float: right;
+  background: #fff;
+  font-size: 24rpx;
+  padding: 0;
+  outline: none;
+}
+
+.zwjl {
+  padding: 228rpx;
+  text-align: center;
+  color: #adadad;
+  font-size: 26rpx;
+}
+
+.zwjl image {
+  display: block;
+  margin: 0 auto 20rpx;
+  width: 264rpx;
+  height: 204rpx;
+}

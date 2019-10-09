@@ -1,0 +1,29 @@
+<!--component/date.wxml-->
+<!-- style='top:{{dateData.height}}px'  -->
+<view wx:if="{{dateData.is_show}}" class="calendar">
+  <view class='content'>
+    <view class="selectDate">
+      <icon wx:if="{{ifPrev}}" class="iconfont icon-zuo" bindtap="prevMonth"></icon>
+      <view class="date-wrap">
+        {{year}}年/{{month}}月
+      </view>
+      <icon class="iconfont icon-right" bindtap="nextMonth"></icon>
+    </view>
+    <view class="week">
+      <view wx:for="{{weekArr}}" wx:for-index="index" wx:for-item="item" wx:key="key">{{item}}</view>
+    </view>
+    <view class="date">
+      <block wx:for="{{dateArr}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+        <view style="{{index ==0?'margin-left:'+ 14.2 *firstDay +'%;':''}}" class="day">
+          <view bindtap='choiceDate' data-i='{{index}}' data-ativedate='{{item.isAtiveDate}}' class="{{index+1==day && year == currYear && month == currMonth?'today':''}} {{index+1<day && year == currYear && month == currMonth?'pervDay':''}} {{item.isAtiveDate?'ativeDate':''}} {{year+'-'+month+'-'+ (index+1)=== activeDate[currentI].date?'currentDate':''}}">
+            {{item.day}}
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='btnWrap'>
+      <view bindtap='is_show'>取消</view>|
+      <view bindtap='sure'>确定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,119 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view>
+  <modal modal-data='{{modalData}}'></modal>
+</view>
+<view class='wrap'>
+  <view class='box1'>
+    <image src='{{order_status_imgs[order_detail.order_info.toi_status]}}'></image>
+    <view>
+      <view class='ticket'>
+        {{order_detail.cate_name}}
+      </view>
+      <view class='text1'>
+        {{order_detail.order_info.order_status_name}}
+      </view>
+      <view class='text2'>
+        {{order_detail.museum}}
+      </view>
+      <view wx:if='{{order_detail.order_info.toi_status==2}}' class='text2'>
+        订单已完成，请您在
+        <text style='color:#FF0021'>{{countDown}}</text>分钟
+        <text style='color:#FF0021'>{{second}}</text>秒内完成支付
+      </view>
+    </view>
+  </view>
+  <view class='box2'>
+    <view class='top'>
+      <view class='title'>{{order_detail.title}}</view>
+      <image class='img' src='{{order_detail.default_img?base_url+order_detail.default_img:""}}'></image>
+      <view class='address'>{{order_detail.place}}</view>
+      <view class='time'>{{order_detail.date}}</view>
+    </view>
+    <view class='content'>
+      <view wx:if="{{order_detail.cate_id==2}}" class='times-title'>
+        家长信息
+      </view>
+      <view class='item'>
+        <text>家长姓名：</text>
+        <text>{{order_detail.person.toi_username}}</text>
+      </view>
+      <view class='item'>
+        <text>证件类型：</text>
+        <text>身份证</text>
+      </view>
+      <view class='item'>
+        <text>证件号码：</text>
+        <text>{{order_detail.person.toi_card_num}}</text>
+      </view>
+      <!-- <view class='item'>
+        <text>单位名称：</text>
+        <text>{{order_detail.person.toi_unit}}</text>
+      </view> -->
+      <!-- 儿童信息 -->
+      <view wx:if="{{order_detail.cate_id==2}}">
+        <view class='times-title'>
+          儿童信息
+        </view>
+        <view class='item'>
+          <text>儿童姓名：</text>
+          <text>{{order_detail.person.children_username}}</text>
+        </view>
+        <view class='item'>
+          <text>证件类型：</text>
+          <text>身份证</text>
+        </view>
+        <view class='item'>
+          <text>证件号码：</text>
+          <text>{{order_detail.person.children_card_num}}</text>
+        </view>
+      </view>
+
+      <view class='orderInfo'>
+      <view wx:if="{{order_detail.order_info.toi_status==8}}">
+          <text>截止兑现时间：</text>
+          <text>{{order_detail.order_info.i_qp_time}}</text>
+        </view>
+        <view wx:if="{{order_detail.order_info.signno!=0}}">
+          <text>签到编码：</text>
+          <text>{{order_detail.order_info.signno}}</text>
+        </view>
+        <!-- <view wx:if="{{order_detail.order_info.invite_code!=0}}">
+          <text>邀 请 码：</text>
+          <text>{{order_detail.order_info.invite_code}}</text>
+        </view> -->
+        <view wx:if='{{order_detail.order_info.toi_sn}}'>
+          <text>订单编号：</text>
+          <text>{{order_detail.order_info.toi_sn}}</text>
+        </view>
+        <view>
+          <text>创建时间：</text>
+          <text>{{order_detail.order_info.i_add_time}}</text>
+        </view>
+        <view wx:if='{{order_detail.order_info.pay_time}}'>
+          <text>付款时间：</text>
+          <text>{{order_detail.order_info.pay_time}}</text>
+        </view>
+        <view wx:if='{{order_detail.order_info.discount_price!="0"}}'>
+          <text>支付金额：</text>
+          <text class='price'>￥{{order_detail.order_info.discount_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='padding:0 40rpx;'>
+    <view class='phoneNumber'>
+      <image src='../../icon/shoujihaoma_icon@2x.png'></image>
+      手机号码：
+      <text>{{order_detail.person.toi_contact_phone}}</text>
+    </view>
+  </view>
+  <view wx:if='{{order_detail.order_info.toi_status!=10&&order_detail.order_info.toi_status==1}}' class='tips'>
+    如需退票请于{{order_detail.refund_lasttime}}前至“我的订单”取消订单，过期将不予退款！
+  </view>
+  <button wx:if='{{order_detail.order_info.can_refund}}' bindtap='sureCancel' class='button'>
+    {{order_detail.order_info.toi_status==8?'取消候补':'取消订单'}}
+  </button>
+  <button wx:if='{{order_detail.order_info.toi_status==2}}' bindtap='payment' class='button'>
+    支付订单
+  </button>
+</view>

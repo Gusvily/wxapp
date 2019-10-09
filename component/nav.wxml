@@ -1,0 +1,15 @@
+<view class="nav-component" style='height:{{navbarData.ifBg?capsuleData.bottom+10:0}}px;'>
+  <view class='nav-wrap' style='top:{{capsuleData.top}}px;line-height: {{capsuleData.height}}px;height: {{capsuleData.height}}px'>
+    <view class='nav-capsule' style='height:{{capsuleData.height}}px;width:{{capsuleData.width}}px;left:10px; background:{{navbarData.ifBg?"none":"rgba(0, 0, 0, 0.2)"}}' wx:if='{{navbarData.showCapsule}}'>
+      <view data-router='{{navbarData.router}}' class='fanhui' bindtap='_navback' wx:if='{{navbarData.ifBack}}'>
+        <image src='{{navbarData.ifBg?"../icon/fanhui.png":"../icon/fanhuis.png"}}'></image>
+        <view class='sx'></view>
+      </view>
+      <view bindtap='_backhome' wx:if='{{navbarData.ifHome}}' class='backhome'>
+        <image src='{{navbarData.ifBg?"../icon/shouye.png":"../icon/shouyes.png"}}'></image>
+      </view>
+    </view>
+    <text class='nav-title'>{{navbarData.title}}</text>
+  </view>
+</view>
+<view style='height:{{navbarData.ifBg?capsuleData.bottom+10:0}}px;'></view>

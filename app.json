@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/activity/activity",
+    "pages/activity/activityDetail",
+    "pages/activity/activityFrom",
+    "pages/activity/addVisitors",
+    "pages/activity/addChildVisitors",
+    "pages/activity/yyjg",
+    "pages/activity/addPhone",
+    "pages/activity/getAddress",
+    "pages/activity/confirm",
+    "pages/activity/searchCity",
+    "pages/personal/personalCenter",
+    "pages/personal/orderDetail",
+    "pages/personal/paymentSure",
+    "pages/personal/sign",
+    "pages/index/getSetting",
+    "pages/index/register",
+    "pages/index/login",
+    "pages/index/addunionid"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "component": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents":{
+    "nav-bar": "/component/nav",
+    "my-order": "/component/myOrder",
+    "modal": "/component/modal",
+    "pick-date": "/component/pickDate"
+  },
+  "disableSwipeBack": true,
+  "sitemapLocation": "sitemap.json"
+}

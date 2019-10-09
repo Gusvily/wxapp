@@ -1,0 +1,72 @@
+<!--pages/activity/confirm.wxml-->
+<nav-bar bindisfrom="isfrom" navbar-data='{{nvabarData}}'></nav-bar>
+<my-order></my-order>
+<modal modal-data='{{modalData}}'></modal>
+<view class='wrap'>
+  <view class='activityInfo'>
+    <view class='title'>{{active_detail.title}}</view>
+    <image src='{{active_detail.default_img}}'></image>
+    <view class='address'>{{active_detail.place}}</view>
+    <view class='time'>
+      {{active_detail.time}}
+    </view>
+  </view>
+
+  <view class='fromInfo'>
+    <view class='itemInfoList'>
+      <view class='itemInfo'>
+        <text>报名人姓名：</text>
+        <text>{{userIfo.toi_username}}</text>
+      </view>
+      <view class='itemInfo'>
+        <text>证件类型：</text>
+        <text>身份证</text>
+      </view>
+      <view class='itemInfo'>
+        <text>证件号码：</text>
+        <text>{{userIfo.toi_card_num}}</text>
+      </view>
+      <view class='itemInfo'>
+        <text>邀请码：</text>
+        <text>{{userIfo.invite_code}}</text>
+      </view>
+      <view wx:if="{{userIfo.alternate}}" class='itemInfo'>
+        <text>候补兑现时间：</text>
+        <text>{{userIfo.alternate}}</text>
+      </view>
+    </view>
+    <view class='itemInfoList' wx:if='{{active_detail.cate_id!=1}}'>
+      <view class='itemInfoT'>
+        <text>儿童姓名：</text>
+        <text>{{userIfo.children_username}}</text>
+      </view>
+      <view class='itemInfoT'>
+        <text>证件类型：</text>
+        <text>身份证</text>
+      </view>
+      <view class='itemInfoT'>
+        <text>证件号码：</text>
+        <text>{{userIfo.children_card_num}}</text>
+      </view>
+    </view>
+    <view class='phoneNumber'>
+      <image src='../../icon/shoujihaoma_icon@2x.png'></image>
+      手机号码：
+      <text>{{userIfo.contact_phone}}</text>
+    </view>
+    <view wx:if='{{active_detail.price!=="0.00"}}' class='total'>
+      <text class='total-txt1'>共计：</text>
+      <text class='total-txt2'>￥{{active_detail.price}}</text>
+    </view>
+    <!-- <view wx:if='{{active_detail.price==="0.00"}}'>免费</view> -->
+    <!-- <view bindtap='sure' class='button'>
+      {{active_detail.price==="0.00"?"确认订单":"支付订单"}}
+    </view> -->
+    <form bindsubmit="formSubmit" report-submit='true'>
+      <button formType="submit" class='button'>
+        {{active_detail.price==="0.00"?"确认订单":"支付订单"}}
+      </button>
+    </form>
+  </view>
+
+</view>

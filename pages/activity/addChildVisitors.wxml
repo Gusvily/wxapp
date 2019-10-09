@@ -1,0 +1,29 @@
+<!--pages/activity/activityFrom.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<my-order></my-order>
+<view class='wrap'>
+  <view class='from'>
+    <view>
+      <label>
+        <text>*</text> 报名人姓名：</label>
+      <input placeholder="请输入姓名(必填)" placeholder-style="text-align: right;" bindinput="bind_toi_username" maxlength="20" type="text" value='{{toi_username}}'></input>
+    </view>
+    <view>
+      <label>
+        <text>*</text> 证件类型：</label>
+      {{array[index]}}
+      <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        {{array[index]}}
+        <icon class='iconfont icon-right'></icon>
+      </picker> -->
+    </view>
+    <view>
+      <label>
+        <text>*</text> 证件号码：</label>
+      <input placeholder="请输入证件号码(必填)" type="idcard" bindinput="bind_toi_card_num" placeholder-style="text-align: right;" type="text" value='{{toi_card_num}}'></input>
+    </view>
+    <button bindtap='sub' class='button'>
+      确认
+    </button>
+  </view>
+</view>

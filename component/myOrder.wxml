@@ -1,0 +1,6 @@
+<!--component/myOrder.wxml-->
+<movable-area wx:if="{{is_show}}" class="movableArea" style="height: 100vh; width: 100vw;">
+  <movable-view bindtap='goMyOrder' class='myOrder' inertia="true" x="{{x}}" y="{{y}}" direction="none">
+    <image src="../icon/wodedingdan_btn@2x.png"></image>我的订单
+  </movable-view>
+</movable-area>

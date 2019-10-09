@@ -1,0 +1,189 @@
+/* pages/activity/activityFrom.wxss */
+
+.activityInfo {
+  padding: 32rpx 36rpx;
+  border-top: 2rpx solid #e9e9e9;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+
+.activityInfo image {
+  width: 114rpx;
+  height: 80rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.address {
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-bottom: 14rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #9b9b9b;
+}
+
+.time text {
+  font-size: 26rpx;
+  color: #ff3600;
+  float: right;
+  font-weight: bold;
+}
+
+/* 以上是多动简介 */
+
+.times-title {
+  border-left: 12rpx solid #e8593e;
+  padding: 0 0 0 28rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin: 40rpx auto;
+}
+
+.from {
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  /* border-top: 2rpx solid #e9e9e9; */
+}
+
+.from view {
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 36rpx 0;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+
+.from input {
+  text-align: right;
+}
+
+.from .changePhoneNum {
+  color: #5b6583;
+  border-bottom: 0;
+}
+
+.rightBtn {
+  width: 16rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+
+.button {
+  width: 670rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  text-align: center;
+  background: #fb4b30;
+  border-radius: 56rpx;
+  color: #fff;
+  margin: 50rpx auto;
+}
+
+
+/* 有参观人 */
+
+.visitors-wrap {
+  padding: 32rpx 36rpx;
+}
+.visitors-label{
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.visitors-item {
+  border-bottom: 2rpx solid #e9e9e9;
+  display: flex;
+  justify-content: space-between;
+  padding: 34rpx 0;
+}
+
+.visitors-info {
+  font-size: 28rpx;
+  line-height: 48rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.visitors-info-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.operation {
+  display: flex;
+}
+
+.bianji {
+  border-right: 2rpx solid #e9e9e9;
+  border-left: 2rpx solid #e9e9e9;
+  padding: 30rpx;
+}
+
+.bianji image {
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.shanchu {
+  padding: 30rpx;
+}
+
+.shanchu image {
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.radioWrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.radioGroup {
+  width: 41rpx;
+  height: 41rpx;
+  border: 2rpx solid rgba(198, 94, 66, 1);
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 24rpx;
+  height: 24rpx;
+  background: rgba(198, 94, 66, 1);
+  border-radius: 50%;
+}
+
+.add {
+  width: 337rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border: 2rpx solid rgba(232, 89, 62, 1);
+  border-radius: 32rpx;
+  text-align: center;
+  margin: 36rpx auto;
+  color: #e8593e;
+  font-size: 28rpx;
+}

@@ -1,0 +1,152 @@
+<view class="nav-component" style='height:{{capsuleData.bottom+10}}px;'>
+  <view class='nav-wrap' style='top:{{capsuleData.top}}px;line-height: {{capsuleData.height}}px;height: {{capsuleData.height}}px'>
+    <view bindtap="goAddress" class='city'>
+      <image src="../../icon/didian_icon@2x.png"></image>
+      <text>{{city}}</text>
+    </view>
+    <text class='nav-title'>热门活动</text>
+  </view>
+</view>
+<view style='height:{{capsuleData.bottom+10}}px;'></view>
+<my-order></my-order>
+<view class='box1'>
+  <view class='top'>
+    <view bindtap='is_show' style='padding-top:30rpx'>
+      <view class='box1-c'>
+        <text class='md'>{{date.month}}/{{date.day}}</text>
+      </view>
+      <view class='box1-a'>
+        <text>{{date.year}}</text>
+        <text>{{date.week}}</text>
+      </view>
+      <view class='box1-b'>
+        <icon class='iconfont icon-caret-down'></icon>
+      </view>
+    </view>
+    <!-- <view wx:if="{{!is_show_order}}" bindtap='goMyOrder' class='myOrder'>
+      <image src="../../icon/wodedingdan_btn@2x.png"></image>我的订单
+    </view> -->
+  </view>
+  <!-- <view class='museumWrap'>
+    <scroll-view scroll-x="true" scroll-into-view="{{'index'+active}}" class='scroll'>
+      <view data-ai='0' data-mid='0' bindtap='ckickAI' id="{{'index'+0}}" class='{{active==0?"active":""}}'>
+        全部
+      </view>
+      <view wx:for='{{museum_ist}}' wx:for-index="idx" wx:for-item="item" wx:key="id" id="{{'index'+(idx+1)}}" data-ai='{{(idx+1)}}' data-mid='{{item.museum_id}}' bindtap='ckickAI' class='{{active==(idx+1)?"active":""}}'>{{item.title}}</view>
+    </scroll-view>
+  </view> -->
+  <view id='selectWrap'>
+    <view class='selt' bindtap='is_status_list'>
+      <text>{{status_list[status]}}</text>
+      <image src='../../icon/9.png'></image>
+    </view>
+    <view class='selt' bindtap='is_museum_list'>
+      <text>{{museum_list[active].title}}</text>
+      <image wx:if='{{!is_gxh}}' src='../../icon/9.png'></image>
+    </view>
+    <view class='selt' bindtap='is_type_list'>
+      <text>{{trye_list[type]}}</text>
+      <image src='../../icon/9.png'></image>
+    </view>
+  </view>
+</view>
+<date bindsureDate='getDate' id='date' date-data='{{dateData}}'></date>
+<view wx:if='{{isStatus}}' bindtap='is_status_list' class='statusList'>
+  <scroll-view scroll-y class='statusScroll'>
+    <view wx:for="{{status_list}}" wx:if="{{!(index==2||index==3)}}" catchtap='clickStatus' data-status='{{index}}' class='item'>
+      <text>{{item}}</text>
+      <icon class='iconfont {{status==index?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <!-- <view catchtap='clickStatus' data-status='1' class='item'>
+      <text>报名中</text>
+      <icon class='iconfont {{status==1?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <view catchtap='clickStatus' data-status='2' class='item'>
+      <text>报名已满</text>
+      <icon class='iconfont {{status==2?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <view catchtap='clickStatus' data-status='3' class='item'>
+      <text>报名结束</text>
+      <icon class='iconfont {{status==3?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <view catchtap='clickStatus' data-status='4' class='item'>
+      <text>未开始</text>
+      <icon class='iconfont {{status==4?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view> -->
+  </scroll-view>
+</view>
+<view wx:if='{{isMuseum}}' bindtap='is_museum_list' class='statusList'>
+  <scroll-view scroll-y scroll-into-view="{{'index'+active}}" class='statusScroll'>
+    <!-- <view catchtap='ckickAI' data-ai='0' data-mid='0' class='item'>
+      <text>全部博物馆</text>
+      <icon class='iconfont {{active==0?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view> -->
+    <view class='item' wx:for='{{museum_list}}' wx:for-index="idx" wx:for-item="item" wx:key="id" id="{{'index'+idx}}" data-ai='{{idx}}' data-mid='{{item.museum_id}}' catchtap='ckickAI'>
+      <text>{{item.title}}</text>
+      <icon class='iconfont {{active==idx?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if='{{isType}}' bindtap='is_type_list' class='statusList'>
+  <scroll-view scroll-y class='statusScroll'>
+    <view wx:for="{{trye_list}}" catchtap='clickTypes' data-type='{{index}}' class='item'>
+      <text>{{item}}</text>
+      <icon class='iconfont {{type==index?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <!-- <view catchtap='clickTypes' data-type='0' class='item'>
+      <text>全部类别</text>
+      <icon class='iconfont {{type==0?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <view catchtap='clickTypes' data-type='1' class='item'>
+      <text>活动</text>
+      <icon class='iconfont {{type==1?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view>
+    <view catchtap='clickTypes' data-type='2' class='item'>
+      <text>讲座</text>
+      <icon class='iconfont {{type==2?"icon-duigouyuan":"icon-yuan"}}'></icon>
+    </view> -->
+  </scroll-view>
+</view>
+<!-- 100  195 -->
+<view class='list'>
+  <view wx:if="{{listShow}}" wx:for='{{list}}' wx:for-index="idx" wx:for-item="item" wx:key="id" class='listItem'>
+    <view class='type'>{{item.type==1?"活动":"讲座"}}</view>
+    <navigator url="activityDetail?id={{item.active_id}}" hover-class="none">
+      <image src="{{item.default_img?base_url+item.default_img:''}}"></image>
+      <view class='listItemTitle'>
+        {{item.title}}
+      </view>
+      <view class='activity-abstract'>
+        名额：{{item.signup_maxnum}}{{item.cate_id==1?"人":"组"}}
+        <text wx:if='{{item.type!=2}}'>{{item.cate_id==1?"普通活动":item.active_id==77?"亲子活动":"亲子活动(1大1小)"}} </text> | 面向人群：{{item.object}}
+      </view>
+      <view class='listItem-two'>
+        <view class='active_time'>{{item.date}}</view>
+        <view wx:if="{{item.active_status ==1}}" class='residue'>
+          <!-- <text>{{item.session}}</text> -->
+          <rich-text nodes="{{item.session}}"></rich-text>
+          <!-- <text style='color:#e8593e'>{{item.residue}}</text> -->
+          <!-- <text>{{item.cate_id==1?"人":"组"}}</text> -->
+        </view>
+      </view>
+      <view class='listItem-last'>
+        <!-- <text style='background:{{item.date_status=="上午"?"#28A1E7":"#DA801B"}}' class='text1'>{{item.date_status}}</text> -->
+        <view>
+          <text style='background:{{active_status_color[item.active_status]}}' class='text2'>{{item.active_status_show}}</text>
+          <text class='text3'>{{item.museum}}</text>
+        </view>
+        <view>
+          <text wx:if='{{item.price=="0.00"&&item.active_id!=85}}' class='text4'>免费</text>
+          <text wx:if='{{item.active_id==85&&item.price=="0.00"}}' class='text4'>活动免费(不含门票)</text>
+          <text wx:if='{{item.price!="0.00"}}' class='text4'>{{item.price}}/次</text>
+        </view>
+
+      </view>
+    </navigator>
+  </view>
+  <view class='zwjl' wx:if="{{!listShow}}">
+    <image src='../../icon/whd.png'></image>
+    <view class='v1'>{{vTxt1}}</view>
+    <view class='v2'>{{vTxt2}}</view>
+  </view>
+</view>

@@ -1,0 +1,365 @@
+/* pages/activity/activity.wxss */
+.nav-component{
+  width: 100%;
+  border-bottom: 2rpx solid #E9E9E9;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  color: #000;
+  z-index: 99;
+  overflow: hidden;
+  text-align: center;
+}
+.city{
+  position: absolute;
+  padding-left: 40rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.city image{
+  width: 20rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.city text{
+  vertical-align: middle;
+}
+/* 标题要居中 */
+
+.nav-title {
+  max-width: 260rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 36rpx;
+  color: #2c2b2b;
+  font-weight: 600;
+}
+
+.box1 {
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 3px 4px 6px 0px rgba(4, 1, 1, 0.014);
+  padding: 0 0 20rpx 40rpx;
+  position: fixed;
+  left: 0;
+  z-index: 9;
+}
+
+.box1 view {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.top {
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+
+.activity-wrap {
+  background: #fff;
+  height: 20vh;
+}
+
+.navigationBar {
+  background: red;
+  height: 9vh;
+}
+
+.museumWrap {
+  position: relative;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #45474e;
+  /* padding-left: 140rpx; *//* background: #01ad62; */
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.active {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.active::after {
+  position: absolute;
+  bottom: 0;
+  height: 6rpx;
+  width: 60rpx;
+  content: " ";
+  display: block;
+  background: #ff634f;
+  left: 50%;
+  margin-left: -30rpx;
+}
+
+.scroll {
+  height: 90rpx;
+  display: flex;
+  white-space: nowrap;
+  color: #9b9b9b;
+  font-size: 32rpx;
+}
+
+.scroll view {
+  position: relative;
+}
+
+#selectWrap {
+  display: flex;
+}
+
+#selectWrap .selt {
+  background: #f6f6f6;
+  font-size: 28rpx;
+  padding: 0 10px;
+  text-align: center;
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+  max-width: 240rpx;
+  padding-right: 40rpx;
+}
+
+#selectWrap .selt text {
+  max-width: 180rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#selectWrap image {
+  width: 16rpx;
+  height: 12rpx;
+  color: #45474e;
+  position: absolute;
+  top: 24rpx;
+  right: 10rpx;
+}
+
+.md {
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.box1-a text {
+  display: block;
+  font-size: 20rpx;
+}
+
+.box1-b {
+  color: #ff634f;
+}
+
+.box1 .myOrder {
+  width: 198rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background: #ff634f;
+  float: right;
+  color: #fff;
+  border-radius: 56rpx 0 0 56rpx;
+  font-size: 26rpx;
+  margin-right: 0;
+}
+
+.myOrder image {
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+  margin-top: -6rpx;
+}
+
+.list {
+  padding: 230rpx 0 30rpx;
+}
+
+.listItem {
+  width: 670rpx;
+  margin: 0 auto 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 30rpx 0 rgba(0, 0, 0, 0.26);
+  position: relative;
+}
+
+.listItem .type {
+  border-radius: 0 20rpx 0 0;
+  padding: 4rpx 14rpx;
+  background: #ff634f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.listItem navigator {
+  padding-bottom: 20rpx;
+}
+
+.listItem:last-child {
+  margin-bottom: 0;
+}
+
+.listItem image {
+  display: block;
+  width: 670rpx;
+  height: 376rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.listItem .listItemTitle {
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 24rpx 30rpx;
+}
+
+.listItem .activity-abstract {
+  font-size: 26rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 0 30rpx;
+}
+
+.listItem-key-word {
+  height: 54rpx;
+  line-height: 54rpx;
+  padding: 0 30rpx;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.listItem-key-word .text1 {
+  font-size: 26rpx;
+  background: #28a1e7;
+  color: #fff;
+  border-radius: 4rpx;
+  margin-right: 18rpx;
+  padding: 0 10rpx;
+}
+.listItem-two{
+   padding: 10rpx 30rpx;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.text2 {
+  font-size: 26rpx;
+  background: #01ad62;
+  color: #fff;
+  border-radius: 4rpx;
+  margin-right: 24rpx;
+  padding: 0 10rpx;
+}
+.text3 {
+  font-size: 26rpx;
+}
+.text4 {
+  font-size: 28rpx;
+  color: #e8593e;
+  font-weight: bold;
+}
+.residue {
+  font-size: 26rpx;
+  color: #999;
+}
+.listItem-last{
+  width: 100%;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.active_time {
+  color: #999;
+  font-size: 26rpx;
+}
+.zwjl {
+  padding-top: 228rpx;
+  text-align: center;
+  color: #adadad;
+  font-size: 26rpx;
+}
+
+.zwjl image {
+  display: block;
+  margin: 0 auto 20rpx;
+  width: 264rpx;
+  height: 204rpx;
+}
+
+.zwjl .v1 {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.zwjl .v2 {
+  font-size: 26rpx;
+  color: #bfbfbf;
+  margin-top: 50rpx;
+}
+
+/* 弹窗 */
+
+.statusList {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+}
+
+.statusScroll {
+  width: 670rpx;
+  max-height: 510rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  position: absolute;
+  top: 25%;
+  left: 40rpx;
+}
+
+.statusScroll .item {
+  height: 102rpx;
+  line-height: 102rpx;
+  padding-left: 28rpx;
+  padding-right: 50rpx;
+  color: #333;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.statusScroll .iconfont {
+  font-size: 46rpx;
+  color: #e5e5e5;
+  border-radius: 50%;
+}
+
+.statusScroll .icon-duigouyuan {
+  font-size: 46rpx;
+  border-radius: 50%;
+  color: #ff634f;
+}

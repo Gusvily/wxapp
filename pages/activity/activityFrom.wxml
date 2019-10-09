@@ -1,0 +1,158 @@
+<!--pages/activity/activityFrom.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<my-order></my-order>
+<modal modal-data='{{modalData}}'></modal>
+<!-- 截止兑现时间选择器 -->
+<pick-date bindgetDate="candidate" pick-data='{{pickData}}'></pick-date>
+<view class='wrap'>
+  <!-- 活动简介 -->
+  <view class='activityInfo'>
+    <view class='title'>{{sessionData.title}}</view>
+    <image src="{{sessionData.default_img}}"></image>
+    <view class='address'>{{sessionData.place}}</view>
+    <view class='time'>
+      {{sessionData.time}}
+      <text wx:if='{{sessionData.price!=="0.00"}}'>￥{{sessionData.price}}</text>
+      <text wx:if='{{sessionData.price==="0.00"}}'>免费</text>
+    </view>
+  </view>
+  <view class="from">
+    <!-- 截至兑现时间 -->
+    <view wx:if="{{hb==1}}" bindtap="is_paick">
+      <label>
+        <text space="nbsp">截止兑现时间</text>
+      </label>
+      <text>{{sessionData.date}} - {{sessionData.active_start_time}}</text>
+      <image class="rightBtn" src="../../icon/left_btn@2x.png"></image>
+    </view>
+    <!-- 邀请码 -->
+    <view>
+      <label>
+        <text space="nbsp">邀  请  码 </text> </label>
+      <input placeholder="请输入邀请码(非必填)" placeholder-style="text-align: right;" bindinput="bind_invite_code" type="text" value='{{invite_code}}'></input>
+    </view>
+  </view>
+  <!-- 家长信息 -->
+  <view wx:if='{{cate_id==2}}' class='times-title'>
+    家长信息
+  </view>
+  <!-- 首次预约 -->
+  <view wx:if="{{!person.length}}" class='from'>
+    <!-- 姓名 -->
+    <view style="border-top:{{cate_id==2?'2rpx solid #e9e9e9':''}}">
+      <label>姓
+        <text style='visibility: hidden'>姓名</text>名</label>
+      <input placeholder="请输入姓名(必填)" placeholder-style="text-align: right;" bindinput="bind_toi_username" maxlength="20" type="text" value='{{toi_username}}'></input>
+    </view>
+    <!-- 证件类型 -->
+    <view>
+      <label>证件类型</label>
+      身份证
+    </view>
+    <!-- 证件号码 -->
+    <view>
+      <label>证件号码</label>
+      <input placeholder="请输入证件号码(必填)" type="idcard" bindinput="bind_toi_card_num" placeholder-style="text-align: right;" type="text" value='{{toi_card_num}}'></input>
+    </view>
+    <!-- 手机号码 -->
+    <view>
+      <label>手机号码</label>
+      <input disabled='true' placeholder="{{contact_phone}}" placeholder-style="text-align: right;" bindinput="bind_contact_phone" type="text"></input>
+    </view>
+    <!-- 使用其他号码 -->
+    <view bindtap='changePhoneNum' class='changePhoneNum'>
+      使用其他手机号码
+    </view>
+  </view>
+  <!-- 有成年参观人的情况 -->
+  <view wx:if="{{person.length}}" class="visitors-wrap">
+    <view class="visitors-label">
+      选择参观人
+    </view>
+    <view wx:for="{{person}}" wx:key="{{index}}" class="visitors-item">
+      <view class="radioWrap">
+        <view data-index="{{index}}" bindtap="checked_radio" class="radioGroup">
+          <view hidden="{{is_radio!=index}}" class="radio"></view>
+        </view>
+      </view>
+      <view class="visitors-info">
+        <view class="visitors-info-top">
+          <text class="name">{{item.title}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+        <view>{{item.card}}</view>
+      </view>
+      <view class="operation">
+        <!-- type 1 编辑 0 删除  person 1 成人-->
+        <view data-item="{{item}}" data-type='1' data-person='1' bindtap="editVisitor" class="bianji">
+          <image src="../../icon/bianji.png"></image>
+        </view>
+        <view data-id="{{item.id}}" data-i='{{index}}' data-person='1' bindtap="editVisitor" class="shanchu">
+          <image src="../../icon/shanchu.png"></image>
+        </view>
+      </view>
+    </view>
+    <view bindtap="goAddVisitor" class="add">
+      +添加成年参观人
+    </view>
+  </view>
+
+  <!-- 儿童信息 -->
+  <view wx:if='{{cate_id==2&&!child.length}}' class='times-title'>
+    儿童信息
+  </view>
+  <view wx:if='{{cate_id==2&&!child.length}}' class="from">
+    <!-- 儿童姓名 -->
+    <view style="border-top:{{cate_id==2?'2rpx solid #e9e9e9':''}}">
+      <label>儿童姓名</label>
+      <input placeholder="请输入儿童姓名(必填)" placeholder-style="text-align: right;" bindinput="bind_children_username" maxlength="20" type="text" value='{{children_username}}'></input>
+    </view>
+    <!-- 儿童证件类型 -->
+    <view>
+      <label> 证件类型</label>
+      <text class='id'>身份证</text>
+    </view>
+    <!-- 儿童证件号码 -->
+    <view>
+      <label>证件号码</label>
+      <input placeholder="请输入证件号码(必填)" type="idcard" bindinput="bind_children_card_num" placeholder-style="text-align: right;" type="text" value='{{children_card_num}}'></input>
+    </view>
+  </view>
+  <!-- 有儿童参观人 -->
+  <view wx:if='{{cate_id==2&&child.length}}' class="visitors-wrap">
+    <view class="visitors-label">
+      选择参观人
+    </view>
+    <view wx:for="{{child}}" wx:key="{{index}}" class="visitors-item">
+      <view class="radioWrap">
+        <view data-index="{{index}}" bindtap="checked_radio2" class="radioGroup">
+          <view hidden="{{is_radio2!=index}}" class="radio"></view>
+        </view>
+      </view>
+      <view class="visitors-info">
+        <view class="visitors-info-top">
+          <text class="name">{{item.title}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+        <view>{{item.card}}</view>
+      </view>
+      <view class="operation">
+        <!-- type 1 编辑 0 删除  person 1 成人 0 儿童-->
+        <view data-item="{{item}}" data-type='1' data-person='0' bindtap="editVisitor" class="bianji">
+          <image src="../../icon/bianji.png"></image>
+        </view>
+        <view data-id="{{item.id}}" data-i='{{index}}' data-person='0' bindtap="editVisitor" class="shanchu">
+          <image src="../../icon/shanchu.png"></image>
+        </view>
+      </view>
+    </view>
+    <view bindtap="goAddChildVisitor" class="add">
+      +添加儿童参观人
+    </view>
+  </view>
+  <!-- 确认信息 -->
+  <button bindtap='sub' class='button'>
+    确认信息
+  </button>
+
+</view>

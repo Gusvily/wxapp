@@ -1,0 +1,22 @@
+<!--component/modal.wxml-->
+<view catchtouchmove="true" wx:if="{{modalData.is_show}}" class='modal'>
+  <view class='modal-conent'>
+    <view class='title'>
+      {{modalData.title}}
+      <icon bindtap='close' class='iconfont icon-guanbi'></icon>
+    </view>
+    <view class='text'>
+      <text>
+    {{modalData.content}}
+    </text>
+    </view>
+    <!-- <view bindtap="goRouter" class='btn'>
+      {{modalData.btnText}}
+    </view> -->
+    <form bindsubmit="goRouter" report-submit='true'>
+      <button formType="submit" class='btn'>
+        {{modalData.btnText}}
+      </button>
+    </form>
+  </view>
+</view>

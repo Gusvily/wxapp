@@ -1,0 +1,249 @@
+/* pages/activity/confirm.wxss */
+
+/* pages/activity/parentOffspringAf.wxss */
+
+.wrap {
+  padding-bottom: 34rpx;
+}
+
+.activityInfo {
+  padding: 32rpx 36rpx;
+  border-top: 2rpx solid #e9e9e9;
+}
+
+.activityInfo image {
+  width: 114rpx;
+  height: 80rpx;
+  /* border-radius: 6rpx; */
+  float: left;
+  margin-right: 20rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.address {
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-bottom: 14rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #9b9b9b;
+}
+
+.time text {
+  font-size: 26rpx;
+  color: #ff3600;
+  float: right;
+  font-weight: bold;
+}
+
+/* 1111 */
+
+.itemInfo:first-child {
+  border-top: 10rpx solid #ff8f7f;
+  border-radius: 20rpx 20rpx 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.itemInfo:last-child {
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.itemInfo:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+}
+
+.itemInfo:first-child::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:nth-child(2)::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:first-child::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:nth-child(2)::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 36rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  background: #fff;
+}
+
+/* 2222 */
+
+/* 2222 */
+
+.itemInfoT {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 36rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  background: #fff;
+}
+
+.itemInfoT:first-child {
+  border-top: 10rpx solid #e8aa3e;
+  border-radius: 20rpx 20rpx 0 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 36rpx;
+}
+
+.itemInfoT:last-child {
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.itemInfoT:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+}
+
+.itemInfoT:first-child::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfoT:nth-child(2)::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfoT:first-child::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfoT:nth-child(2)::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+/* 2222 */
+
+.fromInfo {
+  padding: 0 40rpx;
+}
+
+.itemInfoList {
+  box-shadow: 0px 0px 24rpx 0px rgba(123, 122, 122, 0.34);
+  border-radius: 20rpx;
+}
+
+/* .company {
+  width: 70%;
+  text-align: right;
+} */
+
+.total {
+  text-align: right;
+  margin-top: 50rpx;
+}
+
+.total .total-txt1 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #999;
+}
+
+.total .total-txt2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #e8593e;
+}
+
+.button {
+  height: 112rpx;
+  line-height: 112rpx;
+  text-align: center;
+  background: #e8593e;
+  border-radius: 56rpx;
+  color: #fff;
+  margin-top: 100rpx;
+}
+
+label text {
+  color: red;
+}

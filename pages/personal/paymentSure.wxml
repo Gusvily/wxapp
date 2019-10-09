@@ -1,0 +1,23 @@
+<!--pages/personal/paymentSure.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='wrap'>
+  <view class='box1'>
+    <image src='../../icon/zhifuqueren_icon@2x.png'></image>
+    <view class='text1'>
+      请确认
+    </view>
+    <view class='text2'>
+      微信支付是否成功
+    </view>
+  </view>
+  <view class='reminder'>
+    <image src='../../icon/wenxintishi_icon@2x.png'></image>
+    <text class='reminder-text1'>温馨提示：</text> 若没有调起微信支付，请升级您的微信APP
+  </view>
+  <button bindtap='fun1' class='button'>
+    已完成支付
+  </button>
+   <button bindtap='fun2' class='button2'>
+    支付遇到问题，重新支付
+  </button>
+</view>

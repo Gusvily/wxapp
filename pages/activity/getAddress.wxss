@@ -1,0 +1,175 @@
+/* pages/activity/getAddress.wxss */
+
+.wrapper {
+  /* height: 100vh; */
+  padding-top: 132rpx;
+  position: relative;
+}
+
+/* 关闭滚动条  */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.search {
+  height: 132rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4rpx 8rpx 2rpx rgba(38, 38, 38, 0.12);
+  padding: 30rpx 40rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.searchInput {
+  height: 72rpx;
+  line-height: 72rpx;
+  background: rgba(238, 238, 238, 1);
+  border-radius: 20rpx;
+  padding-left: 40rpx;
+  font-size: 24rpx;
+}
+
+.searchInput icon {
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+
+.searchInput input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.gps {
+  height: 96rpx;
+  line-height: 96rpx;
+  padding-left: 40rpx;
+}
+
+.gps text:first-child {
+  color: #4a4a4a;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-right: 24rpx;
+}
+
+.gps text:last-child {
+  font-size: 26rpx;
+  color: #c6c6c6;
+}
+
+.box {
+  padding: 30rpx 40rpx 60rpx;
+  background: #f7f7f7;
+}
+
+.zjfw, .rmcs {
+  color: #9b9b9b;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+
+.rmcs {
+  margin-top: 44rpx;
+}
+
+.box_item_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box_item {
+  width: 202rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  margin: 0 10rpx 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box_item .active {
+  border: 2rpx solid rgba(232, 89, 62, 1);
+  color: rgba(232, 89, 62, 1);
+}
+
+.city_list_wrap {
+  padding: 0 40rpx;
+}
+
+.city_item view {
+  height: 82rpx;
+  line-height: 82rpx;
+  color: #4a4a4a;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.city_item .activeCityId {
+  color: #e8593e;
+  border: none;
+  border-bottom: 2rpx solid #eee;
+}
+
+.city_item .key_name {
+  border-bottom: none;
+  font-size: 26rpx;
+  color: #9b9b9b;
+}
+
+.floor_box {
+  width: 48rpx;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.floor_wrap {
+  width: 48rpx;
+  background: rgba(0, 0, 0, 0.3);
+  color: #4a4a4a;
+  font-size: 24rpx;
+  /* line-height: 40rpx; */
+  text-align: center;
+}
+
+.floor_wrap .active {
+  color: red;
+}
+
+.activeCityId {
+  color: #e8593e;
+  border: 2rpx solid #e8593e;
+}
+
+.modelFloor {
+  width: 160rpx;
+  text-align: center;
+  height: 160rpx;
+  line-height: 160rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4rpx;
+  font-size: 96rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  overflow: hidden;
+}

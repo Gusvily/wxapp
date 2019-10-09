@@ -1,0 +1,62 @@
+/* pages/activity/searchCity.wxss */
+.wrapper {
+  height: 100vh;
+}
+
+/* 关闭滚动条  */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.search {
+  height: 132rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4rpx 8rpx 2rpx rgba(38, 38, 38, 0.12);
+  padding: 30rpx 40rpx;
+}
+
+.searchInput {
+  height: 72rpx;
+  line-height: 72rpx;
+  background: rgba(238, 238, 238, 1);
+  border-radius: 20rpx;
+  padding-left: 40rpx;
+  font-size: 24rpx;
+}
+
+.searchInput icon {
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+
+.searchInput input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.city_list_wrap {
+  padding: 0 40rpx;
+}
+
+.city_item>view {
+  height: 82rpx;
+  line-height: 82rpx;
+  color: #4a4a4a;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.city_item .activeCityId {
+  color: #e8593e;
+  border: none;
+  border-bottom: 2rpx solid #eee;
+}
+
+.city_item .key_name {
+  border-bottom: none;
+  font-size: 26rpx;
+  color: #9b9b9b;
+}

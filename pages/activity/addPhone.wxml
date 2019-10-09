@@ -1,0 +1,20 @@
+<!--pages/activity/addPhone.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='wrap'>
+  <view class='from'>
+    <view>
+      <label>手机号码：</label>
+      <input placeholder="输入有效手机号" placeholder-style="color:#9B9B9B;" bindinput="bindPhone" value='{{phone}}' type="number"></input>
+      <view bindtap='getCode' class='yzm'>
+       {{is_send?'已发送':' 获取验证码'}}
+      </view>
+    </view>
+    <view class='yzm'>
+      <label>验证码：</label>
+      <input placeholder="输入6位验证码" placeholder-style="color:#9B9B9B;" bindinput="bindSmscode" value='{{smscode}}' type="number"></input>
+    </view>
+     <view bindtap='addPhone' class='button'>
+      提交
+    </view>
+  </view>
+</view>

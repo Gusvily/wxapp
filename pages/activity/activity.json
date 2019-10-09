@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "date": "/component/date"
+  },
+  "enablePullDownRefresh": true,
+  "disableSwipeBack": true
+}

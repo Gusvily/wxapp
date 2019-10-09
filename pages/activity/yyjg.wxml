@@ -1,0 +1,24 @@
+<!--pages/activity/yyjg.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<my-order></my-order>
+<view class='wrap'>
+  <view class='box1'>
+    <image src='../../icon/wancheng_icon@2x.png'></image>
+    <view class='text1'>
+      {{order_detail.order_info.order_status_name}}
+    </view>
+    <view wx:if="{{!hb}}" class='text2'>预约完成，请按时参加活动！如需退票请于<text>{{order_detail.refund_lasttime}}</text>
+    前至“我的订单”取消订单，过期将不予退款或取消！</view>
+    <view wx:if="{{hb}}" class='text2'>您的候补报名截止兑现时间：{{alternate}}， 候补兑现成功视为预约成功，退改签按既有规则参与。</view>
+  </view>
+  <view class='reminder'>
+    <image src='../../icon/wenxintishi_icon@2x.png'></image>
+    <text class='reminder-text1'>温馨提示：</text> {{order_detail.wxts}}
+  </view>
+  <view class='button'>
+    <text bindtap='goIndex'>继续购票</text><text>|</text><text bindtap='goHome' >{{hb?'查看候补订单':'查看订单'}}</text>
+  </view>
+   <!-- <button bindtap='goHome' class='button'>
+    <text>查看订单</text>
+  </button> -->
+</view>

@@ -1,0 +1,150 @@
+/* pages/activity/activityFrom.wxss */
+.wrap{
+  padding-top: 110rpx;
+}
+.from {
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  border-top: 2rpx solid #e9e9e9;
+}
+
+.from view {
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 36rpx 0;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+
+.from input {
+  text-align: right;
+}
+
+.from view text {
+  color: #fd1717;
+}
+
+.from .changePhoneNum {
+  color: #5b6583;
+  border-bottom: 0;
+}
+
+picker {
+  vertical-align: middle;
+  margin-top: -20rpx;
+}
+
+.icon-right {
+  font-size: 26rpx;
+}
+
+.itemInfo:first-child {
+  border-top: 10rpx solid #ff8f7f;
+  border-radius: 20rpx 20rpx 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.itemInfo:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+}
+
+.itemInfo:first-child::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:nth-child(2)::before {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  left: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:first-child::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  bottom: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfo:nth-child(2)::after {
+  display: block;
+  content: " ";
+  width: 30rpx;
+  height: 30rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: -15rpx;
+  top: -15rpx;
+  border-radius: 50%;
+}
+
+.itemInfoList {
+  box-shadow: 0px 0px 24rpx 0px rgba(123, 122, 122, 0.34);
+  border-radius: 20rpx;
+}
+
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 36rpx;
+  font-size: 28rpx;
+  /* min-height: 85rpx; *//* line-height: 85rpx; */
+  border-bottom: 2rpx solid #e9e9e9;
+  background: #fff;
+}
+
+.fromInfo {
+  padding: 0 40rpx;
+}
+
+.company {
+  width: 70%;
+  text-align: right;
+}
+
+.total {
+  text-align: right;
+  margin-top: 50rpx;
+}
+
+.total .total-txt1 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #999;
+}
+
+.total .total-txt2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #e8593e;
+}
+
+.button {
+  height: 112rpx;
+  line-height: 112rpx;
+  text-align: center;
+  background: #FB4B30;
+  border-radius: 56rpx;
+  color: #fff;
+  margin-top: 100rpx;
+}

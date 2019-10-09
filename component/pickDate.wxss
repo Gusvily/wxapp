@@ -1,0 +1,42 @@
+/* component/pickDate.wxss */
+.paickModel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.paick {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 20rpx 20rpx 0px 0px;
+  padding: 30rpx 0;
+}
+
+.paick-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 20rpx 20rpx 0px 0px;
+}
+
+.paick-button {
+  width: 670rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  background: #e8593e;
+  border-radius: 56rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 32rpx;
+  margin: 0 auto;
+}

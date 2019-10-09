@@ -1,0 +1,19 @@
+/* pages/index/addunionid.wxss */
+.mus_logo {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  position: fixed;
+  top: 200rpx;
+  left: 300rpx;
+}
+
+.allow {
+  font-size: 32rpx;
+  width: 650rpx;
+  height: 88rpxpx;
+  position: fixed;
+  bottom: 200rpx;
+  left: 50rpx;
+  text-align: center;
+}

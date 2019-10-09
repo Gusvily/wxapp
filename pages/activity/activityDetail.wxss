@@ -1,0 +1,137 @@
+/* pages/activity/activityDetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+.aDbox1 image {
+  width: 100%;
+  display: block;
+}
+
+.aDwrap {
+  padding: 50rpx 40rpx;
+}
+
+.aDtitle {
+  font-size: 44rpx;
+  font-weight: bold;
+}
+
+.aDinfo {
+  font-size: 28rpx;
+}
+
+.aDinfo view {
+  border-bottom: 2rpx solid #e9e9e9;
+  padding: 22rpx 0;
+}
+
+.aDinfo view text {
+  display: inline-block;
+}
+
+.aDinfo view text:first-child {
+  color: #9b9b9b;
+  margin-right: 22rpx;
+}
+
+/* 时间选择 */
+
+.times-title {
+  border-left: 12rpx solid #e8593e;
+  padding-left: 22rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  height: 32rpx;
+  line-height: 26rpx;
+  margin: 50rpx 0 30rpx 0;
+}
+
+.times-item {
+  height: 145rpx;
+  background: rgba(245, 245, 244, 1);
+  border-radius: 4rpx;
+  padding: 36rpx 30rpx 44rpx;
+  position: relative;
+  margin-bottom: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.times-item-time {
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+}
+
+.times-item-title {
+  font-size: 24rpx;
+  color: #949494;
+}
+.candidate{
+  color: #008FF7;
+  font-size: 26rpx;
+  text-align: center;
+}
+.times-item-status {
+  font-size: 26rpx;
+  width: 132rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  color: #fff;
+  background: rgba(232, 89, 62, 1);
+  border-radius: 24rpx;
+}
+
+.activilySyn {
+  font-size: 28rpx;
+}
+.activilySyn image{
+  display: block;
+  margin: 0 auto;
+  /* width: 100%; */
+}
+.reminder {
+  box-shadow: 0 0 22rpx 0 rgba(0, 0, 0, 0.14);
+  border-radius: 20rpx;
+  padding: 30rpx 40rpx 30rpx 66rpx;
+  font-size: 26rpx;
+  margin-top: 50rpx;
+  position: relative;
+  text-align: justify;
+}
+
+.reminder image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 32rpx;
+  left: 24rpx;
+}
+
+.reminder-text1 {
+  color: #e8593e;
+  display: block;
+  font-weight: bold;
+  margin-bottom:10rpx
+}
+.text4{
+  color: #e8593e;
+}
+.residue{
+  display: inline-block;
+  margin-left: 20rpx;
+  /* border-bottom: 6rpx solid #e8593e; */
+  /* color: #858DE3; */
+}
+#aa{
+  width: 500rpx;
+  display: inline-block;
+  height: 100%;
+  white-space: pre-wrap;
+  padding: 0;
+  border: none;
+  vertical-align: top;
+}
+#aa text{
+  display: inline;
+  color: #333;
+}

@@ -1,0 +1,31 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='wrap'>
+  <view class='content'>
+    <image wx:if='{{toi_status==3}}' class='qdwc' src='../../icon/qiandaowancheng_icon@2x.png'></image>
+    <view wx:if='{{toi_status==3}}' class='title'>
+      签到成功
+    </view>
+    <view class='title'>
+      {{sign_info.title}}
+    </view>
+    <view class='time'>
+      {{sign_info.date}}
+    </view>
+    <view wx:if='{{!toi_status}}' class="msg">
+      <view class="msgTip">
+        {{msg}}
+      </view>
+    </view>
+    <view wx:if='{{toi_status}}' class="wxts">
+      <view class='label'>温馨提示：</view>
+      <view class='tips'>
+        <text>{{sign_info.wxts}}</text>
+      </view>
+    </view>
+    <form bindsubmit="formSubmit" report-submit='true'>
+      <button disabled='{{toi_status!=1}}' hidden='{{toi_status==3}}' style="background:{{toi_status==1?'#E8593E':'#7F7F7F'}}" formType="submit" class='button'>
+        {{toi_status==2?'已签到':'签到'}}
+      </button>
+    </form>
+  </view>
+</view>
